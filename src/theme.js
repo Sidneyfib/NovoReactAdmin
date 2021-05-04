@@ -1,25 +1,27 @@
-import { defaultTheme } from "react-admin";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-import merge from "lodash/merge";
 import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
-
-export const useStyles = makeStyles({
-    price: { color: 'white',
-             background: '#4caf50'    },
-
-    header:{ color: 'white',
-             backgroundColor: 'blue',},
-
-   
-});
 
 
 export const useListStyles = makeStyles({
-    actions:{
-        backgroundColor:'black',
+    actions:{backgroundColor:'#aa2e25',
+        color:'white',
     },
     header:{
-        backgroundColor:'black',
-    },    
+        backgroundColor:'dark',
+        color:'white',
+        header:'white',
+    },  
+    price: { color: 'white',
+             background: '#4caf50'    },  
+});
+
+
+export const theme = createMuiTheme({
+  palette: {
+    type: 'dark', 
+
+    
+    // Switching the dark mode on is a single property value change.
+  },
 });

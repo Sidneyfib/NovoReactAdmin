@@ -9,24 +9,31 @@ import {UserShow} from './Users/UserShow';
 import {PostList} from './Posts/PostList';
 import {PostEdit} from './Posts/PostEdit';
 import {PostShow} from './Posts/PostShow';
+import {theme} from './theme';
+import MyLayout from './MyLayout';
+
+
+
+
 
 
 
 
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
-const App = () => {
+const App = () => (
   
-  return(
-  <Admin  dataProvider={dataProvider} >
 
+  <Admin layout={MyLayout} theme={theme} dataProvider={dataProvider} >
+   
     <Resource  name="users" options={{label:'Usuários'}}list={UserList} show={UserShow} edit={UserEdit}  icon={PeopleIcon}/>
-    <Resource name="posts" options={{label:'Postagens'}} list={PostList} show={PostShow} edit={PostEdit} icon={PostAddOutlinedIcon}/>
+    <Resource name="posts" options={{label:'Postagens'}} list={PostList} show={PostShow} edit={PostEdit}  icon={PostAddOutlinedIcon}/>
+  
   </Admin>
 
 
 
-)};
+);
 
 
 

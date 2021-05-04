@@ -4,7 +4,7 @@ import { Edit, SimpleForm, TextInput, ReferenceInput, SelectInput } from 'react-
 
 
 
-export const PostEdit = props =>(
+ export const PostEdit = props =>(
 
     <Edit {...props}>
         <SimpleForm>
