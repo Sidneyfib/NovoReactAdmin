@@ -1,6 +1,6 @@
 import * as React from "react";
 import { List, Datagrid, TextField, ReferenceField, EditButton, ShowButton, ChipField } from 'react-admin';
-import {useListStyles, useStyles } from '../theme';
+import { useStyles } from '../theme';
 
 
 /*const TitleField = props => {
@@ -13,9 +13,9 @@ import {useListStyles, useStyles } from '../theme';
 
 export const PostList = props =>{
     const classes = useStyles();
-    const classes2 = useListStyles();
+    
    return (
-    <List classes={classes2.header} {...props} >
+    <List  {...props} >
         <Datagrid Class={classes.price} >
             <TextField headerClassName={classes.price} source="id"/>
             <ReferenceField headerClassName={classes.price} label="user" source="userId" reference="users">
